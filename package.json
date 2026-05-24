@@ -5,42 +5,33 @@
   "main": "index.js",
   "scripts": {
     "clean:allure": "rimraf allure-results",
-    
     "pretest:master": "npm run clean:allure",
     "test:master": "playwright test --grep @master",
     "testchain:master": "npm run clean:allure && playwright test --grep @master",
-
     "pretest:sanity": "npm run clean:allure",
     "test:sanity": "playwright test --grep @sanity",
     "testchain:sanity": "npm run clean:allure && playwright test --grep @sanity",
-
     "pretest:regression": "npm run clean:allure",
     "test:regression": "playwright test --grep @regression",
     "testchain:regression": "npm run clean:allure && playwright test --grep @regression",
-    
     "pretest:datadriven": "npm run clean:allure",
     "test:datadriven": "playwright test --grep @datadriven",
     "testchain:datadriven": "npm run clean:allure && playwright test --grep @datadriven",
-    
     "pretest:master:headed": "npm run clean:allure",
     "test:master:headed": "playwright test --grep @master --headed",
     "testchain:master:headed": "npm run clean:allure && playwright test --grep @master --headed",
-
     "pretest:end-to-end": "npm run clean:allure",
     "test:end-to-end": "playwright test --grep @end-to-end --headed",
     "testchain:end-to-end": "npm run clean:allure && playwright test --grep @end-to-end --headed",
-    
     "pretest:sanity:debug": "npm run clean:allure",
     "test:sanity:debug": "playwright test --grep @sanity --debug",
     "testchain:sanity:debug": "npm run clean:allure && playwright test --grep @sanity --debug",
-    
     "prefinal": "npm run clean:allure",
     "final": "playwright test --grep @master --workers 3 --fully-parallel",
     "testchain:final": "npm run clean:allure && playwright test --grep @master --workers 3 --fully-parallel",
-
     "pretest:final": "npm run clean:allure",
     "test:final": "playwright test --grep @master --workers 3 --fully-parallel"
-      },
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -48,7 +39,8 @@
   "devDependencies": {
     "@playwright/test": "^1.60.0",
     "@types/node": "^25.9.1",
-    "allure-playwright": "^3.9.0"
+    "allure-playwright": "^3.9.0",
+    "rimraf": "^6.1.3"
   },
   "dependencies": {
     "@faker-js/faker": "^10.4.0",
