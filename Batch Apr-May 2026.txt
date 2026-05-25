@@ -5,3 +5,5 @@ Welcome to Playwright Typescript Automation!!
 I am Rajesh SDET 8 years of Automation Testing Exp.
 
 updated to run jenkins pipeline automatically.
+
+After Adding url in Webhook push the code to trigger.
